@@ -1,6 +1,6 @@
 # Data Structures: Linked Lists
 
-This code is a 'solution' to The Odin Project's <a url="https://www.theodinproject.com/lessons/javascript-linked-lists">Linked Lists Project</a>, part of their Computer Science course.
+This code is a solution to The Odin Project's <a url="https://www.theodinproject.com/lessons/javascript-linked-lists">Linked Lists Project</a> as part of their Computer Science course.
 
 LinkedList methods:
 
