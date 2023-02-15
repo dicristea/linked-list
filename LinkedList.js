@@ -1,14 +1,9 @@
-console.log("Begin");
-
 const Node = (value = null, next = null) => {
   return { value, next };
 };
 
 const LinkedList = (head = null) => {
-  // Bring last node out to LinkedList outer function scope
-
   const append = (value) => {
-    // adds a new node containing value to the end of the list
     let lastNode = head;
     if (lastNode) {
       while (lastNode.next !== null) {
@@ -20,12 +15,10 @@ const LinkedList = (head = null) => {
     return Node(value);
   };
   const prepend = (value) => {
-    // adds a new node containing value to the start of the list
     return Node(value, head);
   };
 
   const size = () => {
-    // returns total number of nodes in the list
     let count = 0;
     let node = head;
     while (node) {
@@ -41,7 +34,6 @@ const LinkedList = (head = null) => {
   };
 
   const tail = () => {
-    // returns the last node in the list
     let lastNode = head;
     if (lastNode) {
       while (lastNode.next !== null) {
@@ -52,7 +44,6 @@ const LinkedList = (head = null) => {
   };
 
   const at = (index) => {
-    // returns node at given index
     let node = head;
     let count = 1;
     while (node) {
@@ -66,7 +57,6 @@ const LinkedList = (head = null) => {
   };
 
   const pop = () => {
-    // removes the last element from the list
     let lastNode = head;
     if (lastNode) {
       while (lastNode.next.next !== null) {
@@ -78,7 +68,6 @@ const LinkedList = (head = null) => {
   };
 
   const contains = (value) => {
-    // returns true if the passed in value is in the list and otherwise returns false
     let node = head;
     if (head) {
       while (node) {
@@ -92,7 +81,6 @@ const LinkedList = (head = null) => {
   };
 
   const find = (value) => {
-    // returns the index of the node containing value, or null if not found.
     let node = head;
     let count = 1;
     while (node) {
@@ -106,7 +94,6 @@ const LinkedList = (head = null) => {
   };
 
   const toString = () => {
-    // parse through nodes, JSON.stringify(node), add to previous returns
     let linkedListString = "";
     let node = head;
     while (node) {
@@ -115,15 +102,9 @@ const LinkedList = (head = null) => {
       node = node.next;
     }
     return linkedListString + null;
-
-    // represents your LinkedList objects as strings, so you can print them out and preview them in the console. The format should be:
-    // ( value ) -> ( value ) -> ( value ) -> null
   };
 
-  // Extra Credit Tip: When you insert or remove a node, consider how it will affect the existing nodes. Some of the nodes will need their nextNode link updated.
-
   const insertAt = (value, index) => {
-    // inserts a new node with the provided value at the given index
     let node = head;
     let count = 1;
 
@@ -142,7 +123,6 @@ const LinkedList = (head = null) => {
   };
 
   const removeAt = (index) => {
-    // removes the node at the given index
     let node = head;
     let count = 1;
     while (node) {
@@ -174,6 +154,8 @@ const LinkedList = (head = null) => {
     removeAt,
   };
 };
+
+// TESTING
 
 let node1 = Node(2);
 let node2 = Node(5);
